@@ -8,7 +8,9 @@ log(1, 2, 3, 4, 5, 6);
 log('basic', 'add', 'operator', 'usage');
 
 function calcOrDouble(number, basis) {
+    basis = basis || 5;
     console.log(number * basis);
 }
 
 calcOrDouble(3, 5);
+calcOrDouble(3);
