@@ -58,13 +58,48 @@ const urlObj = {
     showCurrentURL: function () {
         const extractCurrDomain = () => {
             return this.domain;
-        }
+        };
         const extractCurrProtocol = () => {
             return this.protocol;
-        }
+        };
 
-        console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`)
+        console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`);
     }
+};
+
+urlObj.showCurrentURL();
+
+
+const urlObj2 = {
+    protocol: 'https',
+    domain: 'mysite.com',
+    showCurrentURL: function () {
+        const extractCurrDomain = () => this.domain;
+        const extractCurrProtocol = () => this.protocol;
+        console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`);
+    }
+};
+
+urlObj2.showCurrentURL();
+
+
+
+const urlObj = {
+    protocol: 'https',
+    domain: 'mysite.com'
 }
 
-urlObj.showCurrentURL()
+function showCurrentURL() {
+    const extractCurrDomain = () => {
+        return this.domain;
+    }
+    const extractCurrProtocol = () => {
+        return this.protocol;
+    }
+
+    console.log(`${extractCurrProtocol()}://${extractCurrDomain()}`)
+}
+
+const url = showCurrentURL.bind(urlObj);
+
+console.log(url);
