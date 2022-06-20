@@ -7,8 +7,8 @@ const log = function (a, b, ...rest) {
 log(1, 2, 3, 4, 5, 6);
 log('basic', 'add', 'operator', 'usage');
 
-function calcOrDouble(number, basis) {
-    basis = basis || 5;
+function calcOrDouble(number, basis = 5) {
+    // basis = basis || 5;
     console.log(number * basis);
 }
 
