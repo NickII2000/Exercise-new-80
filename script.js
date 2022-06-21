@@ -97,5 +97,5 @@ function showCurrentURL() {
 
 const url = showCurrentURL.bind(urlObj3);
 
-// console.log(url);
-// url();
+console.log(url);
+url();
