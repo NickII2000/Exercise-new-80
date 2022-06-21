@@ -98,4 +98,4 @@ function showCurrentURL() {
 const url = showCurrentURL.bind(urlObj3);
 
 console.log(url);
-url();
+// url();
